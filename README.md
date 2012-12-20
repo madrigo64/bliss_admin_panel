@@ -12,8 +12,11 @@ Sorry gays but my english is not perfect, therefore I will speak here only in ru
 Требоавания:
 =================
 Windows
+
 Apache 2
+
 PHP 5.4
+
 интернет для отображения карт
 
 Тестировалось в Firefox 17.0.1
