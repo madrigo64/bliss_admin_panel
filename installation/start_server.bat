@@ -1,3 +1,4 @@
+REM  first row with command D: means that game with server located on hard disk D: is important cammand change it according to your disk where installed Bliss Dayz server
 D:
 perl db_utility.pl cleandead 3
 perl db_spawn_vehicles.pl --cleanup all
