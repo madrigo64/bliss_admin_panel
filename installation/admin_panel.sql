@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 20 2012 г., 03:12
+-- Время создания: Дек 20 2012 г., 09:54
 -- Версия сервера: 5.5.27
 -- Версия PHP: 5.4.7
 
@@ -724,7 +724,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (566, 'RPG18', 'sRPG18', 'item', 'backpack', 0, 0, 0, 0, 10, 'backpack', 0, 0),
 (567, 'M14_EP1', 'sM14_EP1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (568, 'M16A2', 'sM16A2', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(569, 'M16A2GL', 'sM16A2GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(569, 'M16A2GL', 'sM16A2GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (570, 'm16a4', 'sm16a4', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (571, 'M16A4_ACG', 'sM16A4_ACG', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (572, 'M16A4_GL', 'sM16A4_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
@@ -739,7 +739,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (581, 'M4SPR', 'sM4SPR', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (582, 'M8_sharpshooter', 'sM8_sharpshooter', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (583, 'M4A1', 'sM4A1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(584, 'M4A1_Aim', 'sM4A1_Aim', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(584, 'M4A1_Aim', 'sM4A1_Aim', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (585, 'M4A1_Aim_camo', 'sM4A1_Aim_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (586, 'M4A1_AIM_SD_camo', 'sM4A1_AIM_SD_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (587, 'M4A1_HWS_GL', 'sM4A1_HWS_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
