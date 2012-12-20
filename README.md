@@ -1,4 +1,4 @@
-Bliss Admin Panel 
+Bliss Admin Panel
 =================
 
 Web Admin Panel on PHP for Bliss Dayz Private Server by skynetdev
@@ -10,6 +10,9 @@ Please don't create any issues in english language,
 the best way is to write me on email on skynetdev3[]gmail.com and I will try answer in english.
 
 Веб Админ Панель на PHP для Bliss сервера игры Dayz от skynetdev
+=================
+Видео инструкция и обзор админ панели 
+http://youtu.be/AVBu4vuq2EA
 
 Требоавания/requirements:
 =================
@@ -50,7 +53,7 @@ panthera
 takistan
 
 
-Instalation:
+Installation:
 =============
 1) Import file <code>admin_panel.sql</code> from folder installation into Database Mysql
 
