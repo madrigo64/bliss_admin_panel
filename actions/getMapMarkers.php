@@ -13,7 +13,7 @@ $map_perameters_array = getMapParameters(getMapName());
 $markers= "[";
 $zindex = 0;
 
-if(isset($_POST['type']) && $_POST['type'] =='vehicle' || isset($_POST['vehicles'])) {
+if(  (isset($_POST['type']) && $_POST['type'] =='vehicle') || (isset($_POST['vehicles']) && !empty($_POST['vehicles']) )) {
           
            $ivcid ='';
           if(isset($_POST['id']) && !empty($_POST['id']) ) $ivcid = 'AND ivc.id = '.$_POST['id']*1;

@@ -15,15 +15,15 @@ the best way is to write me on email on skynetdev3[]gmail.com and I will try ans
 =================
 Windows
 
-Apache 2
+Web Server Apache 2
 
 PHP 5.4
 
-Mysql 5.5
+Mysql Server 5.5
 
 Интернет для отображения карт/Internet for displaying maps
 
-Тестировалось в/tested in: Firefox 17.0.1
+Тестировалось в/tested on: Firefox 17.0.1
 
 при разрешении экрана/tested on resolution 1920x1800
 
