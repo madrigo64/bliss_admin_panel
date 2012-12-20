@@ -3,13 +3,13 @@ Bliss Admin Panel
 
 Web Admin Panel on PHP for Bliss Dayz Private Server by skynetdev
 
-Sorry guys but my english is not perfect, therefore I will write here only on russian language, but
-anyway admin panel support english language of course. Please don't create any issues in english language please,
-the best way  is to write me on email on skynetdev3[]gmail.com
+Sorry guys but my english is not perfect, therefore I will write here on russian language, but
+anyway admin panel support english language of course.
+
+Please don't create any issues in english language please,
+the best way is to write me on email on skynetdev3[]gmail.com
 
 Веб Админ Панель на PHP для Bliss сервера игры Dayz от skynetdev
-
-Всем привет это официальный репозиторий админ панели skynetdev
 
 Требоавания/requirements:
 =================
@@ -19,21 +19,21 @@ Apache 2
 
 PHP 5.4
 
-Internet для отображения карт
+Интернет для отображения карт/Internet for displaying maps
 
-Тестировалось в Firefox 17.0.1
+Тестировалось в/tested in: Firefox 17.0.1
 
-при разрешении экрана 1920x1800
+при разрешении экрана/tested on resolution 1920x1800
 
-Использовался след сервер 
+Сервер Bliss/Bliss server 
 https://github.com/ayan4m1/DayZ-Private
 
 
-Сведения
+Сведения/Information
 ===================
-Админ панель версия альфа 1.0
+Админ панель версия альфа 1.0/ admin panel version alfa 1.0
 
-поддерживает след карты
+поддерживает след карты/supported maps
 
 chernarus
 
@@ -48,6 +48,12 @@ panthera
 takistan
 
 
+Instalation:
+1) Rename file adm_config.incEng.php  to adm_config.php
+2)  and endit it
+3) Login and password for enter in admin panel логин <code>superadmin</code> Пароль <code>123456</code>
+
+
 
 Инсталяция:
 =================
@@ -58,6 +64,8 @@ takistan
 
 3) Логин и пароль для входа в админ панель логин <code>superadmin</code> Пароль <code>123456</code>
 
+
+
 Известные Баги
 =================
 На карте Такистан не верно отображаются координаты. Исправлений не будет, так как сама карта сделанна со сдвигам по координатам.
@@ -66,8 +74,9 @@ takistan
 ================
 перевести полностью на русский язык
 и еще многое другое полезное если увижу от вас финансовую поддержку
+а хороших идей у меня много
 
-Финансовая поддержка и благодарность
+Финансовая благодарность и поддержка
 ================
 у кого есть желание отблагодарить или поддержать меня финансово
 оставляю свои кошельки webmoney

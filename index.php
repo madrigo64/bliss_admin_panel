@@ -89,7 +89,7 @@ require_once 'actions/functions.php';
     <!-- end page -->
 </div>
 <div id="footer">
-    <div id="footer_text">&copy;2012 All Rights Reserved. Free Admin Panel for Bliss Dayz Private Server. Alfa version 1.0 Created by SkyNetDev <?php if(isset($_SESSION['language']) && $_SESSION['language'] == 'ru'):?> <a target="_blank" href="https://www.youtube.com/user/bfpayer"><img width="40px" src="images/main/youtube_winter.png"></a> <?php endif;?></div> 
+    <div id="footer_text">&copy;2012 All Rights Reserved. Free Admin Panel for Bliss Dayz Private Server. Alfa version 1.0 Created by <a target="_blank" href="https://github.com/skynetdev/bliss_admin_panel"><font color="#D56E22">SkyNetDev</font></a> <?php if(isset($_SESSION['language']) && $_SESSION['language'] == 'ru'):?> <a target="_blank" href="https://www.youtube.com/user/bfpayer"><img width="40px" src="images/main/youtube_winter.png"></a> <?php endif;?></div> 
 
     
         
