@@ -19,6 +19,8 @@ Apache 2
 
 PHP 5.4
 
+Mysql 5.5
+
 Интернет для отображения карт/Internet for displaying maps
 
 Тестировалось в/tested in: Firefox 17.0.1
