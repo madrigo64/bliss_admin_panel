@@ -10,7 +10,7 @@
 define('INSTANCE', 1);   //instance id
 define('DESABLE_ZOOM_5_6', false);   // true/false Desable zoom 5 and 6 for map
 define('GET_MAP_FOR_ZOOM_5AND6_LOCAL', true); // true/false if set true will download from internet on hard disk and display  pieces of map  for  zoom 5 and 6  if set to false will try to display map only local (from hard disk)
-define('SITENAME', 'Admin Panel for Bliss Dayz server');
+define('SITENAME', 'Admin Panel for Bliss Dayz server');  // text in head of site
 define('SERVERIP', '127.0.0.1');//server ip
 define('SERVERPORT', 2302);    //server port
 define('USERNAME', 'dayz');   //mysql user

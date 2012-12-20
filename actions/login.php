@@ -37,13 +37,13 @@ if (!empty($_POST)){
             $query = "UPDATE adm_admins SET lastlogin= NOW() WHERE login='$login' LIMIT 1";
             $sql2 = mysql_query($query) or die(mysql_error());
             insert_admin_log('LOGIN');
-            header('Location: ../index.php');
+            header('Location: ../');
 			
 
 
 		
 	}
-	else header('Location: ../index.php?login_error=1');
+	else header('Location: ../?login_error=1');
 	
 }
 ?>
