@@ -4,7 +4,7 @@
  *  my youtube  channel only for russians https://www.youtube.com/user/bfpayer
  */
 
-// WARNING FIRST YOU MUST IMPORT SQL FILE INTO Date Base MySQL From folder Instalation
+// WARNING FIRST YOU MUST IMPORT SQL FILE INTO Date Base MySQL From folder Installation
 
 
 define('INSTANCE', 1);   //instance id
