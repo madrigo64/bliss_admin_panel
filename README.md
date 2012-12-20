@@ -6,7 +6,7 @@ Web Admin Panel on PHP for Bliss Dayz Private Server by skynetdev
 Sorry guys but my english is not perfect, therefore I will write here on russian language, but
 anyway admin panel support english language of course.
 
-Please don't create any issues in english language please,
+Please don't create any issues in english language,
 the best way is to write me on email on skynetdev3[]gmail.com
 
 Веб Админ Панель на PHP для Bliss сервера игры Dayz от skynetdev
@@ -49,8 +49,12 @@ takistan
 
 
 Instalation:
+=============
+
 1) Rename file adm_config.incEng.php  to adm_config.php
+
 2)  and endit it
+
 3) Login and password for enter in admin panel логин <code>superadmin</code> Пароль <code>123456</code>
 
 
