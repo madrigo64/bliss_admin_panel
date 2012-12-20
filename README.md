@@ -50,23 +50,25 @@ takistan
 
 Instalation:
 =============
+1) Import file <code>admin_panel.sql</code> from folder installation into Database Mysql
 
-1) Rename file adm_config.incEng.php  to adm_config.php
+2) Rename file adm_config.incEng.php  to adm_config.php
 
-2)  and endit it
+3)  and endit it
 
-3) Login and password for enter in admin panel логин <code>superadmin</code> Пароль <code>123456</code>
+4) Login and password for enter in admin panel логин <code>superadmin</code> Пароль <code>123456</code>
 
 
 
 Инсталяция:
 =================
+1) Импортируйте файл <code>admin_panel.sql</code> с папки installation в базу данных mysql
 
-1) Переименуйте файл adm_config.incRus.php в файл adm_config.php
+2) Переименуйте файл adm_config.incRus.php в файл adm_config.php
 
-2) Отредактируйте файл adm_config.php
+3) Отредактируйте файл adm_config.php
 
-3) Логин и пароль для входа в админ панель логин <code>superadmin</code> Пароль <code>123456</code>
+4) Логин и пароль для входа в админ панель логин <code>superadmin</code> Пароль <code>123456</code>
 
 
 
