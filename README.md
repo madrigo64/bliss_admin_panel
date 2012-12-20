@@ -43,3 +43,5 @@ https://github.com/ayan4m1/DayZ-Private
 ================
 перевести полностью на русский язык
 
+мой канал на ютубе с полезным видео для админов серверов Dayz
+https://www.youtube.com/user/bfpayer
