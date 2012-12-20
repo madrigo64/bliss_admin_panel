@@ -3,7 +3,7 @@ Bliss Admin Panel
 
 Web Admin Panel on PHP for Bliss Dayz Private Server by skynetdev
 
-Sorry gays but my english is not perfect, therefore I will speak here only in russian.
+Sorry guys but my english is not perfect, therefore I will speak here only in russian.
 
 Веб Админ Панель на PHP для Bliss сервера игры Dayz от skynetdev
 
@@ -37,6 +37,9 @@ https://github.com/ayan4m1/DayZ-Private
 
 Известные Баги
 =================
-
 На карте Такистан не верно отображаются координаты. Исправлений не будет, так как сама карта сделанна со сдвигам по координатам.
+
+В планах
+================
+перевести полностью на русский язык
 
