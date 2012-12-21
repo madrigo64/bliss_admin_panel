@@ -412,16 +412,12 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
         $last_updated  = $row['last_updated'];
         
 	$tablerow = "<tr id='rcon_id_".$player_rcon_id."'>";
- 
-                    if(!$row['is_dead']) {   
+           if($show_type == 'online') {
+
                                 $tablerow .="<td align=\"center\" class=\"table-players-td action\"> <img showtime=$show_type onclick=\"ban_player_form('$player_rcon_id','$row[name]','$player_IP','$player_GUID')\" width=50 title=\"ban player ".$player_name." \" src=\"images/icons/ban.png\"></td>
                                  <td align=\"center\" class=\"table-players-td action\"> <img onclick=\"kick_player_form('$player_rcon_id','$player_name')\" title=\"kick player ".$player_name."\" src=\"images/icons/kick.png\"></td>";
-                    }
-                    else {
-                                $tablerow .="<td align=\"center\" class=\"table-players-td action\"> </td>
-                                 <td align=\"center\" class=\"table-players-td action\"></td>";            
-                      }
-           
+
+           }
                         
                
            
