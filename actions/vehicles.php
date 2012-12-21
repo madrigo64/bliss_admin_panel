@@ -23,10 +23,10 @@ $title ='Vehicles in game';
 	
 	if ($exestatus == strtolower(SERVEREXE)){
 		$serverrunning = true;
-		$_SESSION['msg_red'] .= 'Server is online!';
+		//$_SESSION['msg_red'] = 'Server is online!';
 	} else {
 		$serverrunning = false;
-		$_SESSION['msg_yellow'] .= 'Server is offline';
+		//$_SESSION['msg_yellow'] = "Server is offline";
 	}
 
 	if (isset($_POST["delete_vehicles"])) {
@@ -38,10 +38,9 @@ $title ='Vehicles in game';
 			$query2 = "SELECT * FROM instance_vehicle WHERE id = ".$delete_vehicles[$i].""; 
 			$result2 = mysql_query($query2) or die(mysql_error());
 			while ($row2=mysql_fetch_array($result2)) {
-				//$query2 = "INSERT INTO log_tool(action, user, timestamp) VALUES (DELETE VEHICLE: ".$row2['otype']." - ".$row2['uid']."','{$_SESSION['login']}',NOW())";
 					$query2 = "DELETE FROM instance_vehicle WHERE id='".$delete_vehicles[$i]."'";
 				$sql2 = mysql_query($query2) or die(mysql_error());
-				//$_SESSION['msg_green'] .= 'Vehicle '.$delete_vehicles[$i].' - '.$aDoor[$i].' successfully removed!';
+				
 			}		
 			
 		}
