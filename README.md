@@ -59,7 +59,7 @@ Installation:
 
 2) Rename file adm_config.incEng.php  to adm_config.php
 
-3)  and endit it
+3) Edit file adm_config.php
 
 4) Login and password for enter in admin panel логин <code>superadmin</code> Пароль <code>123456</code>
 
