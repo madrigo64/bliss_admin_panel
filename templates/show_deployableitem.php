@@ -31,7 +31,7 @@
 							<?php echo world_x($Worldspace[1], getMapName()).world_y($Worldspace[2], getMapName()) ?>
 							</div>							
 						</div>
-						<div class="statstext" style="width: 180px; margin-left: 205px; margin-top: -125px;">
+						<div class="statstext" style="width: 180px; margin-left: 205px; margin-top: -136px;">
 						 Body Owner:&nbsp;<br>	<a target="_blank" href="?page=player&svid=<?php echo $row['svid']?>"> <?php echo $row['pfname'];?></a>
                                                 
 						</div>
