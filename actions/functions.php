@@ -522,7 +522,7 @@ function row_vehicle($row) {
 
 		//$tablerow = "<tr>".$chbox."
                 $tablerow = "<tr>    
-			<td align=\"center\" class=\"gear_preview\" ><a href=\"index.php?view=info&show=4&id=".$row['ivcid']."\">".$row['ivcid']."</a></td>
+			<td align=\"center\" class=\"gear_preview\" >".$row['ivcid']."</td>
 			<td align=\"center\" class=\"gear_preview\" ><a target='_blank' href=\"index.php?page=map_static&type=vehicle&id=".$row['ivcid']."\">".world_x($x, getMapName()).world_y($y, getMapName())."</a></td>
                         <td align=\"center\" class=\"gear_preview\" style=\"background-color: rgba(100,".round((255/100)*(100 - ($row['damage']*100))).",0,0.8);\">".  number_format($row['damage'],2)."</td>                            
 			<td align=\"center\" class=\"gear_preview\" ><a target=\"_blank\" href=\"?page=vehicle&id=".$row['ivcid']."\">".$row['class_name']."
