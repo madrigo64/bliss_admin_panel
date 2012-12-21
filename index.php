@@ -38,7 +38,7 @@ require_once 'actions/functions.php';
 </div>
 <?php if(isset($_SESSION['login'])):?>
 <div id="loged_as">
-    &nbsp; &nbsp; Loged as: <?php echo $_SESSION['login'] ?>
+    &nbsp; &nbsp; Logged as: <?php echo $_SESSION['login'] ?>
 </div>
 <?php endif;?>
 <div id="logo">
