@@ -33,8 +33,9 @@ define('SERVEREXE', 'arma2oaserver.exe');  // exe file of server
 define('SERVER_START_FILE', 'start_server.exe'); // this file needed for runing server from admin panel and will help when apache is running as service.
 // admin panel should copy start_server.exe in first time when you will enter in Server Control ->Control (wich located in folder installation) 
 //  in main folder of arma2 game. 
-//   start_server.exe will search in register where isnstaled aram 2 OA automatic
+//   start_server.exe will be running with session of local user it will help to start HiveExt debug monitor without this server will not be work correctly
 //  File start_server.exe  will run file start_server.bat wich will be start server
+//  if apache runing as simple application then file httpd.exe must have admin permissions in system
 
 define('SERVEREXE_PATH', GAME_PATH.DS."expansion".DS."beta".DS.SERVEREXE); 
 
