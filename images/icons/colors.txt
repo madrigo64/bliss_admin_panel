@@ -1,5 +1,0 @@
-22188f blue
-055e0a  green
-f34648  red
-bf3ad6 pink
-yellow e6bd27

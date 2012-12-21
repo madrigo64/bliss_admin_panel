@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 20 2012 г., 09:54
+-- Время создания: Дек 21 2012 г., 04:24
 -- Версия сервера: 5.5.27
 -- Версия PHP: 5.4.7
 
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `adm_objects` (
   `allowed` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1 - allowed, 0 - not allowed',
   PRIMARY KEY (`id`),
   UNIQUE KEY `class_name` (`class_name`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=709 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=710 ;
 
 --
 -- Дамп данных таблицы `adm_objects`
@@ -771,7 +771,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (613, 'PartVRotor', 'sPartVRotor', 'item', 'heavyammo', 0, 0, 0, 0, 6, 'heavyammo', 0, 1),
 (614, 'PartWheel', 'sPartWheel', 'item', 'heavyammo', 0, 0, 0, 0, 6, 'heavyammo', 0, 1),
 (615, 'PartWoodPile', 'sPartWoodPile', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 1),
-(616, 'PipeBomb', 'sPipeBomb', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 0),
+(616, 'PipeBomb', 'sPipeBomb', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 1),
 (617, 'TimeBomb', 'sTimeBomb', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 0),
 (618, 'Mine', 'sMine', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 0),
 (619, 'MineE', 'sMineE', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 0),
@@ -845,7 +845,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (687, 'Winchester1866', 'sWinchester1866', 'item', 'rifle', 0, 0, 0, 0, 1, 'rifle', 0, 1),
 (688, 'Old_bike_TK_CIV_EP1', 'old_bike', 'vehicle', 'bike', 0, 0, 0, 1, 0, 'bike', 0, 0),
 (689, 'Old_bike_TK_INS_EP1', 'old_bike', 'vehicle', 'bike', 0, 0, 0, 1, 0, 'bike', 0, 0),
-(692, 'Hedgehog_DZ', 'Hedgehog', 'vehicle', 'deployable', 0, 0, 0, 0, 0, 'Hedgehog_DZ', 0, 1),
+(692, 'Hedgehog_DZ', 'Hedgehog', 'vehicle', 'deployable', 0, 0, 0, 0, 0, 'Hedgehog_DZ', 1, 1),
 (693, 'Wire_cat1', 'Wire cat', 'vehicle', 'deployable', 0, 0, 0, 0, 0, 'Wire_cat1', 0, 0),
 (694, 'Smallboat_1', 'Small boat', 'vehicle', 'boat', 3, 24, 0, 4, 0, 'smallboat', 0, 0),
 (696, 'Fishing_Boat', 'Fishing Boat', 'vehicle', 'boat', 3, 24, 0, 0, 0, 'boat', 0, 0),
@@ -860,7 +860,8 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (705, 'MMT_USMC', 'bike', 'vehicle', 'bike', 0, 0, 0, 1, 0, 'bike', 2, 0),
 (706, 'HandGrenade_East', 'HandGrenade_East', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (707, '5Rnd_127x99_as50', '5Rnd_127x99_as50', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
-(708, '1Rnd_HE_GP25', '1Rnd_HE_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1);
+(708, '1Rnd_HE_GP25', '1Rnd_HE_GP25', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
+(709, 'Sandbag1_DZ', 'Sandbag1_DZ', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'Sandbag1_DZ', 1, 1);
 
 -- --------------------------------------------------------
 
