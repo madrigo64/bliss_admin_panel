@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 21 2012 г., 04:24
+-- Время создания: Дек 24 2012 г., 14:35
 -- Версия сервера: 5.5.27
 -- Версия PHP: 5.4.7
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `dayz_longhost`
+-- База данных: `dayz`
 --
 
 DELIMITER $$
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `adm_admins` (
 --
 
 INSERT INTO `adm_admins` (`id`, `login`, `password`, `guid`, `lastlogin`, `permissions`) VALUES
-(1, 'superadmin', 'e10adc3949ba59abbe56e057f20f883e', '', '2012-12-20 00:31:25', 'control,admins,chat,entities,map,');
+(1, 'superadmin', 'e10adc3949ba59abbe56e057f20f883e', '', '2012-12-24 00:48:56', 'control,admins,chat,entities,map,');
 
 -- --------------------------------------------------------
 
@@ -566,7 +566,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (409, 'WarfareSupplyTruck_USMC', 'Supply Truck', 'vehicle', 'WarfareClassName', 50, 200, 8, 1, 0, 'WarfareCla', 0, 0),
 (410, '100Rnd_762x51_M240', 's100Rnd_762x51_M240', 'item', 'heavyammo', 0, 0, 0, 0, 2, 'heavyammo', 0, 1),
 (411, '10Rnd_127x99_m107', 's10Rnd_127x99_m107', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
-(412, '10Rnd_762x54_SVD', 's10Rnd_762x54_SVD', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(412, '10Rnd_762x54_SVD', 's10Rnd_762x54_SVD', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (413, '10x_303', 's10x_303', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (414, '15Rnd_9x19_M9', 's15Rnd_9x19_M9', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
 (415, '15Rnd_9x19_M9SD', 's15Rnd_9x19_M9SD', 'item', 'smallammo', 0, 0, 0, 0, 1, 'smallammo', 0, 1),
@@ -607,10 +607,10 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (450, 'AKS_74_UN_kobra', 'sAKS_74_UN_kobra', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (451, 'AK_107_GL_pso', 'sAK_107_GL_pso', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (452, 'AK_107_GL_kobra', 'sAK_107_GL_kobra', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(453, 'AK_107_kobra', 'sAK_107_kobra', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(453, 'AK_107_kobra', 'sAK_107_kobra', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (454, 'AK_107_pso', 'sAK_107_pso', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (455, 'AK_47_M', 'sAK_47_M', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
-(456, 'AK_47_S', 'sAK_47_S', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(456, 'AK_47_S', 'sAK_47_S', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (457, 'AK_74', 'sAK_74', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (458, 'AK_74_GL', 'sAK_74_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (459, 'AK_74_GL_kobra', 'sAK_74_GL_kobra', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
@@ -693,7 +693,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (535, 'ItemSandbag', 'sItemSandbag', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (536, 'ItemSodaCoke', 'sItemSodaCoke', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (537, 'ItemSodaEmpty', 'sItemSodaEmpty', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
-(538, 'ItemSodaMdew', 'sItemSodaMdew', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
+(538, 'ItemSodaMdew', 'sItemSodaMdew', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (539, 'ItemSodaPepsi', 'sItemSodaPepsi', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (540, 'ItemTankTrap', 'sItemTankTrap', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
 (541, 'TrapBear', 'sTrapBear', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 1),
@@ -738,7 +738,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (580, 'M249_DZ', 'sM249_DZ', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (581, 'M4SPR', 'sM4SPR', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (582, 'M8_sharpshooter', 'sM8_sharpshooter', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(583, 'M4A1', 'sM4A1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(583, 'M4A1', 'sM4A1', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (584, 'M4A1_Aim', 'sM4A1_Aim', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (585, 'M4A1_Aim_camo', 'sM4A1_Aim_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (586, 'M4A1_AIM_SD_camo', 'sM4A1_AIM_SD_camo', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
