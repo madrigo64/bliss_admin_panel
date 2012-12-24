@@ -426,7 +426,7 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
 			
 			<td align=\"center\" class=\"table-players-td\">".$row['unique_id']."</td>
 			<td align=\"center\" class=\"table-players-td\"><a target='_blank' href=\"?page=map_static&type=players_all&id=".$row['svid']."\">".world_x($x, getMapName()).world_y($y, getMapName())."</a></td>
-                        <td  align=\"center\" class=\"table-players-td\">{$survival_time}h/$created</td>    
+                        <td  align=\"center\" class=\"table-players-td\">".($survival_time)." min/$created</td>    
 			<td align=\"center\" class=\"table-players-td\">$last_updated</td>
                         <td align=\"center\" class=\"table-players-td\"><a target=\"_blank\" href=\"?page=player&svid=".$row['svid']."\"><b>".htmlspecialchars($player_name).($in_lobby?' <font color=yellow>(Lobby)</font>':'')."</b></a></td>
 			<td align=\"left\" valign=\"top\" class=\"table-players-td inventory\">".$InventoryPreview."</td>
