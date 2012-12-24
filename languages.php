@@ -4,10 +4,6 @@
  *  
  */
 
-/*     <?=$lng_[$ses_lng]?>  */
-
-
-
 //menu
 $lng_home = array('en'=>'Home', 'ru' => 'На главную');
 $lng_srv_control = array('en'=>'Server Control', 'ru' => 'Контр. cервера');
@@ -18,7 +14,7 @@ $lng_enitities = array('en'=>'In Game', 'ru' => 'В игре');
 $lng_survivor = array('en'=>'Survivors', 'ru' => 'Выжившие');
 $lng_vehicles = array('en'=>'Vehicles', 'ru' => 'Техника');
 $lng_ingame = array('en'=>'In Game', 'ru' => 'В игре');
-$lng_spawns = array('en'=>'Spawn Locations', 'ru' => 'Точки возраждения');
+$lng_spawns = array('en'=>'Spawn Locations', 'ru' => 'Точки возрождения');
 $lng_online_rcon = array('en'=>'Rcon Online', 'ru' => 'Rcon Онлайн');
 $lng_online = array('en'=>'Online', 'ru' => 'Онлайн');
 $lng_online_alt = array('en'=>'Online', 'ru' => 'Онлайн через базу');
