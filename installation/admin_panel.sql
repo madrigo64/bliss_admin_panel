@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Дек 24 2012 г., 14:35
+-- Время создания: Дек 24 2012 г., 15:55
 -- Версия сервера: 5.5.27
 -- Версия PHP: 5.4.7
 
@@ -726,7 +726,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (568, 'M16A2', 'sM16A2', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (569, 'M16A2GL', 'sM16A2GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (570, 'm16a4', 'sm16a4', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
-(571, 'M16A4_ACG', 'sM16A4_ACG', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
+(571, 'M16A4_ACG', 'sM16A4_ACG', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
 (572, 'M16A4_GL', 'sM16A4_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (573, 'M16A4_ACG_GL', 'sM16A4_ACG_GL', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (574, 'M24', 'sM24', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 1),
