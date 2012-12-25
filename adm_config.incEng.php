@@ -30,12 +30,11 @@ define('VIP_PLAYERS', '');  //do not check forbidden items for VIP players  for 
 define('GAME_PATH', 'D:'.DS.'Games'.DS.'ArmA2');  // game path of arma2
 define('SERVEREXE', 'arma2oaserver.exe');  // exe file of server
 
-define('SERVER_START_FILE', 'start_server.exe'); // this file needed for runing server from admin panel and will help when apache is running as service.
+define('SERVER_START_FILE', 'start_server.exe'); // this file needed for runing server from admin panel 
 // admin panel should copy start_server.exe in first time when you will enter in Server Control ->Control (wich located in folder installation) 
 //  in main folder of arma2 game. 
-//   start_server.exe will be running with session of local user it will help to start HiveExt debug monitor without this server will not be work correctly
-//  File start_server.exe  will run file start_server.bat wich will be start server
-//  if apache runing as simple application then file httpd.exe must have admin permissions in system
+//   start_server.exe will be run start_server.bat this will help correctly display server status in admin panel after runing server
+
 
 define('SERVEREXE_PATH', GAME_PATH.DS."expansion".DS."beta".DS.SERVEREXE); 
 
