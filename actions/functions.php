@@ -316,7 +316,7 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
 			//$InventoryPreview .= $Inventory[$i];
 			$curitem = $Inventory[$i];
                         // I noticed in inventory sometimes apear item Hatchet_Swing when in DB is not exist
-                        if($curitem == 'Hatchet_Swing') continue; 
+                        if($curitem == 'Hatchet_Swing' || $curitem == '') continue; 
 			$icount = "";
 			if (is_array($curitem)){
                             $curitem = $Inventory[$i][0]; $icount = ' - '.$Inventory[$i][1].' rounds';
@@ -324,7 +324,7 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         
                         //check if item is in table adm_objects
                         $unknow_item = false;
-                        if(!is_array(getObjectByClassName($curitem)) && $curitem != ''){
+                        if(!is_array(getObjectByClassName($curitem))){
                            
                             $unknow_item = true;
                             $_SESSION['unknow_item'][$player_name][] = $curitem;
@@ -395,10 +395,10 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
 				}
 			}
                         
-                        if($curitem == 'Hatchet_Swing') continue;
+                        if($curitem == 'Hatchet_Swing' || $curitem =='') continue;
                         //check if item is in table adm_objects
                         $unknow_item = false;
-                        if(!is_array(getObjectByClassName($curitem)) && $curitem != ''){
+                        if(!is_array(getObjectByClassName($curitem))){
                             
                             $unknow_item = true;
                             $_SESSION['unknow_item'][$player_name][] = $curitem;
