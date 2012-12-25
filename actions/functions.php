@@ -324,11 +324,12 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         
                         //check if item is in table adm_objects
                         $unknow_item = false;
-                        if(!is_array(getObjectByClassName($curitem))){
+                        if(!is_array(getObjectByClassName($curitem)) && $curitem != ''){
+                           
                             $unknow_item = true;
-                            
                             $_SESSION['unknow_item'][$player_name][] = $curitem;
                             insert_player_log('Unknow Item!!!', $player_name, $player_IP, 'Forbidden item '.$curitem);
+                           
                         }
                         
                         
@@ -397,9 +398,9 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         if($curitem == 'Hatchet_Swing') continue;
                         //check if item is in table adm_objects
                         $unknow_item = false;
-                        if(!is_array(getObjectByClassName($curitem))){
-                            $unknow_item = true;
+                        if(!is_array(getObjectByClassName($curitem)) && $curitem != ''){
                             
+                            $unknow_item = true;
                             $_SESSION['unknow_item'][$player_name][] = $curitem;
                             insert_player_log('Unknow Item!!!', $player_name, $player_IP, 'Forbidden item '.$curitem);
                         }
