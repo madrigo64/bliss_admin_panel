@@ -258,7 +258,7 @@ $(document).ready(function() {
  {
        delay_sec=delay_sec*1;
        if(isNaN(delay_sec)) delay_sec=30; // if not correct set to default 30 sec
-       if(delay_sec < 20 ) { alert('minimum 20 sec!'); $('#interval_sec').val('20'); delay_sec=20; }
+       if(delay_sec < 10 ) { alert('minimum 10 sec!'); $('#interval_sec').val('10'); delay_sec=10; }
         
        delay_sec = delay_sec * 1000;
        clearInterval(my_interval); //first clear my interval

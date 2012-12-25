@@ -249,7 +249,8 @@ if(isset($_GET['show']) && $_GET['show']=='all') {
     $all_rows = mysql_num_rows($result_all_rows);
     $paginationManager->setCount($all_rows); 
     
-    if(isset($_POST['invetory']) && $_POST['invetory'] == 'true') $full_invetory=true;
+    $full_invetory=true;
+
     $counter = $paginationManager->getAutoincrementNum();
     while($row = mysql_fetch_assoc($result)) {
         $counter++;

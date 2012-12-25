@@ -243,7 +243,7 @@ function isAjax (){
 
 
 
-
+//check page if is secured
 function issecurity($check_login=true, $check_permission=true, $perm=false)
 {
 
@@ -321,17 +321,32 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
 			if (is_array($curitem)){
                             $curitem = $Inventory[$i][0]; $icount = ' - '.$Inventory[$i][1].' rounds';
                         }
+                        
+                        //check if item is in table adm_objects
+                        $unknow_item = false;
+                        if(!is_array(getObjectByClassName($curitem))){
+                            $unknow_item = true;
+                            
+                            $_SESSION['unknow_item'][$player_name][] = $curitem;
+                            insert_player_log('Unknow Item!!!', $player_name, $player_IP, 'Forbidden item '.$curitem);
+                        }
+                        
+                        
                         // check item if FORBIDDEN
                         $is_forbidden_item ='';
-                        if(ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
+                        if($unknow_item == false && ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
                                 if($is_forbidden_item = is_forbidden_item($curitem, $player_name) == true){ 
                                   if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
                                 }    
                         }
+                        $vss='';
+                        if($is_forbidden_item) $vss = 'vss=forbidden';
+                        if($unknow_item) $vss = 'vss=forbidden_disabled';   
+                        
                         
 			$InventoryPreview .= $curitem?'
-                            <div class="preview_gear_slot'.($is_forbidden_item?' forbidden':'').'"     '.($full_invetory?"style='display:inline-block'":"style='display:table-cell'").' > 
-                            <img '.($is_forbidden_item?' vss="forbidden"':'').' onclick="item_preview(this)"  src="images/thumbs/'.$curitem.'.png" title="'.$curitem.$icount.'" alt="'.$curitem.$icount.'"/>
+                            <div class="preview_gear_slot'.($is_forbidden_item?' forbidden':'').($unknow_item?' forbidden unknow':'').'"     '.($full_invetory?"style='display:inline-block'":"style='display:table-cell'").' > 
+                            <img '.$vss.'  onclick="item_preview(this)"  src="images/thumbs/'.$curitem.'.png" title="'.$curitem.$icount.'" alt="'.$curitem.$icount.'"/>
                             </div>':'';
 		} 	
 	}
@@ -380,17 +395,30 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
 			}
                         
                         if($curitem == 'Hatchet_Swing') continue;
+                        //check if item is in table adm_objects
+                        $unknow_item = false;
+                        if(!is_array(getObjectByClassName($curitem))){
+                            $unknow_item = true;
+                            
+                            $_SESSION['unknow_item'][$player_name][] = $curitem;
+                            insert_player_log('Unknow Item!!!', $player_name, $player_IP, 'Forbidden item '.$curitem);
+                        }
+                        
+                        
                         // check item if FORBIDDEN
                         $is_forbidden_item ='';
-                        if(ACTION_FORBIDDEN_ITEMS != 0   && $curitem!='') {
+                        if($unknow_item == false && ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
                                 if($is_forbidden_item = is_forbidden_item($curitem, $player_name) == true){ 
-                                    if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
+                                  if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
                                 }    
-                        }                           
+                        }
+                        $vss='';
+                        if($is_forbidden_item) $vss = 'vss=forbidden';
+                        if($unknow_item) $vss = 'vss=forbidden_disabled';                         
                         
                         
 			$BackpackPreview .= $curitem?'<div class="preview_gear_slot'.($is_forbidden_item?' forbidden':'').'" '.($full_invetory?"style='display:inline-block'":"style='display:table-cell'").'>
-                            <img '.($is_forbidden_item?' vss="forbidden"':'').' onclick="item_preview(this)" src="images/thumbs/'.$curitem.'.png" title="'.$curitem.$icount.'" alt="'.$curitem.$icount.'"/>
+                            <img '.$vss.' onclick="item_preview(this)" src="images/thumbs/'.$curitem.'.png" title="'.$curitem.$icount.'" alt="'.$curitem.$icount.'"/>
                             </div>':'';
    
 		}		
@@ -635,7 +663,7 @@ function row_vehicle_spawns($row) {
 
 
 function row_deployable_items($row, $chbox) {
-        $x = 0;
+    $x = 0;
 	$y = 0;   
 	$Worldspace = str_replace("[", "", $row['worldspace']);
 	$Worldspace = str_replace("]", "", $Worldspace);
@@ -867,11 +895,13 @@ function getLanguages($languages){
 function is_forbidden_item($curitem, $player_name) {
    if(strpos(VIP_PLAYERS, $player_name) === false ) {
         $adm_object = getObjectByClassName($curitem);
-        if($adm_object['allowed'] == 0) return true;
-   } 
+        if($adm_object['allowed'] === 0) return true;
+        if($adm_object['allowed'] == 1) return false;
+        return true;
+   }else return false; 
        
    
-   return false;
+   return true;
    
    
     
@@ -890,7 +920,7 @@ function  forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $p
         $_SESSION['msg_red'] .= "<br><font color=red>forbidden item $curitem Player $player_name  Banned!!</font>";    
         rcon('addban '.$player_IP.' 0 Cheating/Hacking' );
         rcon('ban '.$player_rcon_id.' 0 Cheating/Hacking');
-        insert_player_log('BAN', $player_name, $player_IP, $player_GUID, 'Forbidden item '.$curitem);
+        insert_player_log('BAN', $player_name, $player_IP, 'Forbidden item '.$curitem);
         return false;
 
        }
@@ -899,7 +929,7 @@ function  forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $p
     if(ACTION_FORBIDDEN_ITEMS == 2)  {
         $_SESSION['msg_red'] .= "<br><font color=red>forbidden item $curitem Player $player_name  kicked!!</font>";  
         rcon('Kick '.$player_rcon_id.' Forbidden item '.$curitem);
-        insert_player_log('KICK', $player_name, $player_IP, $player_GUID, 'Forbidden item '.$curitem);
+        insert_player_log('KICK', $player_name, $player_IP, 'Forbidden item '.$curitem);
         return false;
     }   
     

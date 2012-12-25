@@ -63,19 +63,19 @@ $row=mysql_fetch_array($res);
        if(isset($row['headshots']))       $zombi_headshots = $row['headshots'];
        if(isset($row['survivor_kills']))  $survivor_kills  = $row['survivor_kills'];
        if(isset($row['bandit_kills']))   $bandit_kills    = $row['bandit_kills'];
-                
-							
+             
+       				
 
 							
 
 							                    
                 
                 
-	
+	$uknow_item = '';
 
 	for ($i=0; $i<count($Inventory); $i++){
 		if(array_key_exists($i,$Inventory)){
-			//$debug .= 'Debug:&nbsp;'.$Inventory[$i].';<br />';
+			
 			$curitem = $Inventory[$i];
 			$icount = "";
 			if (is_array($curitem)){$curitem = $Inventory[$i][0]; $icount = ' - '.$Inventory[$i][1].' rounds'; }
@@ -109,7 +109,7 @@ $row=mysql_fetch_array($res);
 						$s = '';
 				}
 			} else {
-				$debug .= 'Unknown item:&nbsp;'.$curitem.';<br />';
+				$_SESSION['unknow_item'][$name][] = $curitem;
 			}
 		}
 	}	

@@ -32,7 +32,7 @@
         url: "actions/players.php?show=<?php echo $_GET['show']?>",
         data: { invetory: invetory_full, answer: rcon_answer, show: mode_online },
         type: "POST",
-        success: function(data) {
+        success: function(data){
             $('#show_table_main').html(data);
 
         },
@@ -50,7 +50,7 @@
     
        delay_sec=$('#interval_sec').val();
        if(isNaN(delay_sec))  { alert('Error! timer will be set to 30 sec'); $('#interval_sec').val('30'); delay_sec=30; }
-       if(delay_sec < 20 ) { alert('minimum 10 sec!'); $('#interval_sec').val('10'); delay_sec=10; }
+       if(delay_sec < 10 ) { alert('minimum 10 sec!'); $('#interval_sec').val('10'); delay_sec=10; }
        delay_sec = delay_sec * 1000;
        clearInterval(my_interval);
         if($('#set_interval:checked').val()) {
@@ -223,9 +223,13 @@ function item_preview(obj){
    $('#item_preview').show(300); 
    $('#item_class_name').html($(obj).attr('title'));  
    $('#item_img_preview').attr('src',$(obj).attr('src'));  
-   if($(obj).attr('vss')){
+   if(vvs=$(obj).attr('vss')){
        $('#new-button').removeAttr('checked');
        $('#status_item').html('Forbidden').css('color','red');
+       if(vvs == 'forbidden_disabled') {
+            $('#button_label').remove();
+             $('#status_item').html('Unknow. Not found in mysql table adm_objects').css('color','orange');
+       }      
    }
    else {
        $('#new-button').attr('checked','checked');
@@ -295,7 +299,7 @@ $(document).ready(function() {
  <?php if(ACTION_FORBIDDEN_ITEMS == true):?>   
     <section>
         <input type="checkbox" checked="checked" name="new-button" id="new-button">
-        <label for="new-button">
+        <label id="button_label" for="new-button">
             <a>&#xF011;</a>
         </label>	   
     </section>

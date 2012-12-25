@@ -50,7 +50,7 @@
 					<div class="vehicle_gear">	
 						<div id="vehicle_inventory">	
 						<?php
-							
+							echo $row['class_name'];
 							$maxmagazines = 24;
 							$maxweaps = 3;
 							$maxbacks = 0;
@@ -90,40 +90,52 @@
 							}
 							
 							$Backpack = (array_merge($bpweapons, $bpacks, $bpitems));
-							$freebacks = $maxbacks;
 							$backpackslots = 0;
 							$backpackitem = array();
 							$bpweapons = array();
 //                                                        echo "<pre>";
 //                                                        print_r($Backpack);
 //                                                        exit;
+                                                       
+                                                       
 							for ($i=0; $i<count($Backpack); $i++){
+                                                                   $forbidden_item = 0;
+                                                                   $unkonw_item =0;
 								$object_array_for_backpack = getObjectByClassName($Backpack[$i]);
-									switch($object_array_for_backpack['type']){
+                                                                
+                                                                if(!$object_array_for_backpack){
+                                                                    $unkonw_item_name[] = $Backpack[$i];
+                                                                    $unkonw_item = 1;
+                                                                }    
+                                                                    
+                                                                if($suka= is_forbidden_item($Backpack[$i], $row['pfname']))
+                                                                    $forbidden_item= 1;
+
+									switch($object_array_for_backpack['subtype']){
 										case 'binocular':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'rifle':
-											$bpweapons[] = array('image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$bpweapons[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'pistol':
-											$bpweapons[] = array('image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$bpweapons[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'backpack':
-											$bpweapons[] = array('image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
-											$freebacks = $freebacks - 1;
+											$bpweapons[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$freebacks++;
 											break;
 										case 'heavyammo':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'smallammo':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'item':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										default:
-											$s = '';
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'class_name'=>$Backpack[$i] ,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 									}
 								
 							}	
@@ -139,7 +151,7 @@
 							$numlines = 0;
 							for ($j=0; $j< $weapons; $j++){
 								if ($jk > 3){ $jk = 0;$jl++;}
-								echo '<div class="gear_slot" style="margin-left:'.($jx+(86*$jk)).'px;margin-top:'.($jy+(86*$jl)).'px;width:84px;height:84px;">'.$bpweapons[$j]['image'].'</div>';
+								echo '<div title='.$backpackitem[$j]['class_name'].' class="gear_slot  '.($backpackitem[$j]['forbidden_item']?'forbidden':'').' '.($backpackitem[$j]['unknow_item']?'unknow':'').'" style="margin-left:'.($jx+(86*$jk)).'px;margin-top:'.($jy+(86*$jl)).'px;width:84px;height:84px;">'.$bpweapons[$j]['image'].'</div>';
 								//$magazines = $magazines - $bpweapons[$j]['slots'];	
 								$freeweaps = $freeweaps - 1;
 								$jk++;
@@ -162,7 +174,7 @@
 							for ($j=0; $j<$magazines; $j++){
 								if ($jk > 6){ $jk = 0;$jl++;}
 								if ($j<count($backpackitem)){
-									echo '<div class="gear_slot" style="margin-left:'.($jx+(49*$jk)).'px;margin-top:'.($jy+(49*$jl)).'px;width:47px;height:47px;">'.$backpackitem[$j]['image'].'</div>';
+									echo '<div title='.$backpackitem[$j]['class_name'].' class="gear_slot '.($backpackitem[$j]['forbidden_item']?'forbidden':'').' '.($backpackitem[$j]['unknow_item']?'unknow':'').'" style="margin-left:'.($jx+(49*$jk)).'px;margin-top:'.($jy+(49*$jl)).'px;width:47px;height:47px;">'.$backpackitem[$j]['image'].'</div>';
 									//$jk = $jk - 1 + $backpackitem[$j]['slots'];
 									//$backpackslots = $backpackslots + $backpackitem[$j]['slots'];
 									$freeslots = $freeslots - 1;
@@ -206,3 +218,13 @@
 	</tr>
 	</table>
 
+        <?php if(is_array($unkonw_item_name) && count($unkonw_item_name) > 0):?>
+        <font color="red" size="5"> Warning found unknow items wich not found in mysql table adm_objects: </font>
+        <font color="orange" size="4">
+       
+        <?php 
+        foreach ($unkonw_item_name as $un_item) {
+            echo '<br>'.$un_item;
+        } ?>
+        </font>
+        <?php endif;?>

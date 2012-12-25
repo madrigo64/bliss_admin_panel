@@ -7,7 +7,52 @@
 
 ?>
 
+<div class="clean-red">
+    <?php
+    if(isset($_SESSION['msg_red']) && $_SESSION['msg_red']!='') {
+        
+        echo $_SESSION['msg_red'];
+        unset($_SESSION['msg_red']);
+    }
+    
+    if(isset($_SESSION['forbidden_item'])) foreach($_SESSION['forbidden_item'] as $pl_name => $rd_msg){
+         
+        echo '<hr>Player <font color=yellow>'.$pl_name.'</font> have forbidden items <br>';
+        foreach ($rd_msg as $item): ?>
+           <div class="preview_gear_slot forbidden" style='display:table-cell' > 
+               <img   src="images/thumbs/<?php echo $item?>.png" title="<?php echo $item?>" alt="<?php echo $item?>"/>
+           </div>
+            
+        <?php endforeach;  
+    unset($_SESSION['forbidden_item']);    
+    } 
+    
+ 
+    
+    if(isset($_SESSION['unknow_item'])) foreach($_SESSION['unknow_item'] as $pl_name => $rd_msg){
+         
+        echo '<hr>Player <font color=yellow>'.$pl_name.'</font> have Unknow items <br>';
+        foreach ($rd_msg as $item): ?>
+           <div class="preview_gear_slot unknow" style='display:table-cell' > 
+             <p title="Item <?php echo $item?> not found in table adm_objects"> Unknow item  <?php echo $item?> </p>
+           </div>
+            
+        <?php endforeach;  
+    unset($_SESSION['unknow_item']);    
+    }   
+    
+     
+    ?>
+</div>
+<div class="clean-green"><?php 
 
+    if(isset($_SESSION['msg_green']) && $_SESSION['msg_green']!='') {
+        
+        echo $_SESSION['msg_green'];
+        unset($_SESSION['msg_green']);
+    }
+
+?></div>
 
 	<div id="page-heading">
                 <h1>

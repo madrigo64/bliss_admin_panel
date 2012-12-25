@@ -511,13 +511,20 @@ z-index: 1;
 
 
 /* MESSAGES --------------------------------------------------------------- */	
-.clean-gray, .clean-red, .clean-green {
+.clean-gray, .clean-red, .clean-green, .clean-yellow {
 text-align:left;
 font-weight : bold;
 font-size:14px;
 
     
 }
+
+.clean-yellow{
+background:#E0A314;
+color:#222222;
+
+}
+
 .clean-gray{
 background:#EFEFEF;
 color:#222222;
@@ -614,6 +621,11 @@ font-size:9px;
 .preview_gear_slot.forbidden {
     background: yellow;
 }    
+
+.preview_gear_slot.unknow {
+    background: orange;
+}  
+
 
 .preview_gear_slot IMG {
     max-width:43px;max-height:43px;
@@ -873,6 +885,15 @@ cursor: pointer;
     text-align: center;
     vertical-align: middle;
 }
+
+.gear_slot.forbidden {
+    background: yellow;
+}    
+
+.gear_slot.unknow {
+    background: orange;
+}  
+
 
 
 .gear_inventory {
