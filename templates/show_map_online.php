@@ -49,7 +49,7 @@ function DayzMapType(theme, backgroundColor) {
 
 DayzMapType.prototype.tileSize = new google.maps.Size(256,256);
 DayzMapType.prototype.minZoom = 2;
-DayzMapType.prototype.maxZoom = <?php echo DESABLE_ZOOM_5_6?'4':'6';?>;
+DayzMapType.prototype.maxZoom = <?php echo DESABLE_ZOOM_5_6?'4':getMapNameForGoogleMap()=='taviana'?'7':'6';?>;
 
 
 DayzMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
@@ -69,7 +69,7 @@ DayzMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
   
   img.src = workfolder+this._theme + '/' + zoom + '/' + coord.x + '_' + coord.y + '.png';
 
-  if(<?php echo GET_MAP_FOR_ZOOM_5AND6_LOCAL==false?'false && ':'true && '?> (zoom == 5 || zoom==6) ) {
+  if(<?php echo GET_MAP_FOR_ZOOM_5AND6_LOCAL==false?'false && ':'true && '?> (zoom == 5 || zoom==6 || zoom==7) ) {
    var map_folder ='';   
    if(this._theme == 'chernarus') map_folder ='/'; else map_folder = '/'+this._theme+'/';
        

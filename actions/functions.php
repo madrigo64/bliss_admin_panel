@@ -739,7 +739,8 @@ function getMapNameForGoogleMap(){
     $result = mysql_query($query);
     $row = mysql_fetch_assoc($result);
     if ($row['name'] == 'panthera2')  $row['name'] = 'panthera';
-    if ($row['name'] == 'lingor')  $row['name'] = 'lingor2';
+    if ($row['name'] == 'lingor')     $row['name'] = 'lingor2';
+    if ($row['name'] == 'tavi')       $row['name'] = 'taviana';
     return $row['name'];
     
     
@@ -805,6 +806,12 @@ function getMapParameters($map_name)
 		$map_array['pixelsPerLonRadian_'] = '260 / (2 * Math.PI)';
                 $map_array['supported'] = true;
                 break;
+            case "tavi":
+           	$map_array['pixelOrigin_'] = '313.6, 86.5';
+		$map_array['pixelsPerLonDegree_'] = '627 / 360';
+		$map_array['pixelsPerLonRadian_'] = '627 / (2 * Math.PI)';
+                $map_array['supported'] = true;
+                break;            
             default: 
            	$map_array['pixelOrigin_'] = '117.1, 96.5';
 		$map_array['pixelsPerLonDegree_'] = '227.5 / 360';
@@ -838,7 +845,9 @@ function world_x($x, $world){
 		$result = ($x/100);
 	} else if($world=="zargabad") {
 		$result = ($x/100);
-	}
+	} else if($world=="tavi") {
+		$result = ($x/100);
+	}  
        return sprintf("%03d",$result);
 }
 
@@ -861,7 +870,9 @@ function world_y($y, $world){
 		$result = ($y/100);
 	} else if($world=="zargabad") {
 		$result = ($y/100);
-	}
+	} else if($world=="tavi") {
+		$result = (256-$y/100);
+	}        
         
         return sprintf("%03d",$result);
         
