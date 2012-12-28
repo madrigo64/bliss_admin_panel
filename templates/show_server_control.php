@@ -6,12 +6,12 @@
  */
 
 // copy SERVER_START_FILE to  $game_path (arma2 main folder)
-if(!file_exists(GAME_PATH.DS.SERVER_START_FILE)){
+if(!file_exists(SERVER_START_FILE)){
    
-   copy('installation'.DS.SERVER_START_FILE, GAME_PATH.DS.SERVER_START_FILE) or die("can't copy file installation".DS.SERVER_START_FILE." to ".GAME_PATH.DS.SERVER_START_FILE." please check path or copy this file manualy"); 
-   copy('installation'.DS.'start_server.bat', GAME_PATH.DS.'start_server.bat') or die("can't copy file installation".DS.'start_server.bat'." to ".GAME_PATH.DS."start_server.bat  please check path or copy this file manualy"); 
+   
+   copy('installation'.DS.'ADM_START_SERVER.bat', SERVER_START_FILE) or die("can't copy file from installation".DS.'ADM_START_SERVER.bat'." to ".SERVER_START_FILE."  please check path or copy this file manualy"); 
   
-   echo "<font color=red size=5>Now check main game folder and edit  file start_server.bat for correctly running server</font>";
+   echo "<font color=red size=5>Now check main game folder and you can edit file ADM_START_SERVER.bat <br> for correctly running server</font>";
     
 }
 

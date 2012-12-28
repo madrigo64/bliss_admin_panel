@@ -17,7 +17,7 @@ if(!issecurity(true,true,'control')) {echo "<h2>Access Denied!</h2>"; exit;}
 
 
 $server_start_command = 'start "" /d '.GAME_PATH.'  /b "'.SERVER_START_FILE.'"';
-$bec_start_command = ' start "" /d  '.BEC_PATH.'  /b "'.BEC_PATH.'\\'.BECEXE.'" '.BEC_STRING;
+$bec_start_command = ' start "" /d  '.BEC_PATH.'  /b "'.BEC_PATH.DS.BECEXE.'" '.BEC_STRING;
 
 
 
@@ -54,16 +54,17 @@ require_once 'templates/show_server_control.php';
     
  if($_POST['action'] == 'server_off'){   
         exec('taskkill /f /IM '.SERVEREXE);
+        exec('taskkill /f /IM '.'restarter.exe');
         sleep(3);
         insert_admin_log('SERVER STOP');
     }
     
  if($_POST['action'] == 'server_on'){   
   
-    
-        exec($server_start_command);
-        sleep(20);
-        exec('taskkill /f /IM cmd.exe');
+         pclose(popen($server_start_command, 'r'));
+       // exec($server_start_command);
+        sleep(25);
+        //exec('taskkill /f /IM cmd.exe');
         insert_admin_log('SERVER START');
 
     }      
