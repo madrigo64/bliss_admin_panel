@@ -55,6 +55,9 @@ takistan
 taviana
 
 
+Поддерживаемые моды / Addons supported
+@rmod
+
 Installation:
 =============
 1) Import file <code>admin_panel.sql</code> from folder installation into Database Mysql
