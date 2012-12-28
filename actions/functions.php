@@ -73,7 +73,7 @@ function getMapMakersPlayersBD($query,  $map_perameters_array, $zindex){
 function insert_admin_log($action)
 {
     if($_SESSION['login']) {
-    $query = "INSERT INTO adm_admins_log(action, admin, created_at) VALUES ('STOP BEC','$_SESSION[login]',NOW())";
+    $query = "INSERT INTO adm_admins_log(action, admin, created_at) VALUES ('$action','$_SESSION[login]',NOW())";
     mysql_query($query) or die(mysql_error());    
     }
     
