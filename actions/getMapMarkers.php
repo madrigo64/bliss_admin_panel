@@ -100,7 +100,7 @@ if(isset($_POST['type']) && $_POST['type'] =='vehicle_spawns') {
 
 
 
-              $description = "<h2>".$row['class_name']."</h2><table ><tr><td><img style=\"max-width: 100px;\" src=\"images/vehicles/".$row['class_name'].".jpg\"></td><td>&nbsp;</td><td style=\"vertical-align:top; \"><h2>Position:</h2>horizontal:".world_x($x,getMapName())." vertical:".world_y($y,getMapName())."</td></tr></table>";
+              $description = "<h2>".$row['class_name']."</h2><table ><tr><td><img style=\"max-width: 100px;\" src=\"images/vehicles/".$row['class_name'].".jpg\"></td><td>&nbsp;</td><td style=\"vertical-align:top; \"><h2>ID:".$row['wvid']."</h2><h2>Change:".($row['chance']*100)."%</h2><h2>Position:</h2>horizontal:".world_x($x,getMapName())." vertical:".world_y($y,getMapName())."</td></tr></table>";
               $markers .= "['".$row['class_name']."', '".$description."',".$x.", ".$y.", ".$zindex++.", 'images/icons/".(file_exists("../images/icons/".$row['icon_type'].".png")?$row['icon_type']:'unknow').".png'],";                  
           }  
 }      
