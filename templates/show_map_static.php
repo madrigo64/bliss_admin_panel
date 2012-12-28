@@ -49,7 +49,7 @@ function DayzMapType(theme, backgroundColor) {
 
 DayzMapType.prototype.tileSize = new google.maps.Size(256,256);
 DayzMapType.prototype.minZoom = 2;
-DayzMapType.prototype.maxZoom = <?php echo DESABLE_ZOOM_5_6?'4':getMapNameForGoogleMap()=='taviana'?'7':'6';?>;
+DayzMapType.prototype.maxZoom = <?php echo DESABLE_ZOOM_5_6==true?(getMapNameForGoogleMap()=='taviana'?'5':'4'):(getMapNameForGoogleMap()=='taviana'?'7':'6');?>;
 
 
 DayzMapType.prototype.getTile = function(coord, zoom, ownerDocument) {
