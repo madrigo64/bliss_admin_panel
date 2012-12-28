@@ -6,8 +6,8 @@ Web Admin Panel on PHP for Bliss Dayz Private Server by skynetdev
 Sorry guys but my english is not perfect, therefore I will write here on russian language, but
 anyway admin panel support english language of course.
 
-Please don't create any issues in english language,
-the best way is to write me on email on skynetdev3[]gmail.com and I will try answer in english.
+If you will create any issue in english language,
+I will try answer in english.
 
 Веб Админ Панель на PHP для Bliss сервера игры Dayz от skynetdev
 =================
