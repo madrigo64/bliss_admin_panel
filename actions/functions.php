@@ -165,22 +165,19 @@ function getRconPlayers(){
 //                echo 
 		$array = preg_split ('/$\R?^/m', $out);
 
-		
+
 		$players = array();
 //		for ($j=0; $j<count($array); $j++){
 //			$players[] = "";
 //		}
 
                if($array[0]=='(0 players in total')  $array = array();
-  
+
 		for ($i=0; $i < count($array); $i++)
 		{
-                    $sub_array=array_diff(explode('  ', $array[$i]), array(null));
-                     for($k=0; $k < 8 ;$k++){
-                       if(isset($sub_array[$k])) 
-                        $players[$i][] = $sub_array[$k];
-                    }
-                }         
+                    $players[$i]=array_values(array_diff(explode(' ', $array[$i]), array(null)));
+                }
+
                 $answers[0]= $players;
                 $answers[1]= $answer;
          return $answers;
