@@ -112,32 +112,42 @@
 //                                                        print_r($Backpack);
 //                                                        exit;
 							for ($i=0; $i<count($Backpack); $i++){
+                                                            
+                                                                   $forbidden_item = 0;
+                                                                   $unkonw_item =0;
+								$object_array_for_backpack = getObjectByClassName($Backpack[$i]);
+                                                                
+                                                                if(!$object_array_for_backpack){
+                                                                    $unkonw_item_name[] = $Backpack[$i];
+                                                                    $unkonw_item = 1;
+                                                                }   
+                                                            
 								$object_array_for_backpack = getObjectByClassName($Backpack[$i]);
 									switch($object_array_for_backpack['type']){
 										case 'binocular':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'rifle':
-											$bpweapons[] = array('image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$bpweapons[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'pistol':
-											$bpweapons[] = array('image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$bpweapons[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'backpack':
 											$bpweapons[] = array('image' => '<img style="max-width:84px;max-height:84px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
-											$freebacks = $freebacks - 1;
+											$freebacks++;
 											break;
 										case 'heavyammo':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'smallammo':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										case 'item':
-											$backpackitem[] = array('image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 											break;
 										default:
-											$s = '';
+											$backpackitem[] = array('unknow_item'=> $unkonw_item,'forbidden_item'=> $forbidden_item,'image' => '<img style="max-width:43px;max-height:43px;" src="images/thumbs/'.$Backpack[$i].'.png" title="'.$Backpack[$i].'" alt="'.$Backpack[$i].'"/>', 'slots' => $row['slots']);
 									}
 								
 							}	
@@ -153,7 +163,7 @@
 							$numlines = 0;
 							for ($j=0; $j< $weapons; $j++){
 								if ($jk > 3){ $jk = 0;$jl++;}
-								echo '<div class="gear_slot" style="margin-left:'.($jx+(86*$jk)).'px;margin-top:'.($jy+(86*$jl)).'px;width:84px;height:84px;">'.$bpweapons[$j]['image'].'</div>';
+								echo '<div class="gear_slot '.($backpackitem[$j]['forbidden_item']?'forbidden':'').' '.($backpackitem[$j]['unknow_item']?'unknow':'').'" style="margin-left:'.($jx+(86*$jk)).'px;margin-top:'.($jy+(86*$jl)).'px;width:84px;height:84px;">'.$bpweapons[$j]['image'].'</div>';
 								//$magazines = $magazines - $bpweapons[$j]['slots'];	
 								$freeweaps = $freeweaps - 1;
 								$jk++;
@@ -176,7 +186,7 @@
 							for ($j=0; $j<$magazines; $j++){
 								if ($jk > 6){ $jk = 0;$jl++;}
 								if ($j<count($backpackitem)){
-									echo '<div class="gear_slot" style="margin-left:'.($jx+(49*$jk)).'px;margin-top:'.($jy+(49*$jl)).'px;width:47px;height:47px;">'.$backpackitem[$j]['image'].'</div>';
+									echo '<div class="gear_slot '.($backpackitem[$j]['forbidden_item']?'forbidden':'').' '.($backpackitem[$j]['unknow_item']?'unknow':'').'" style="margin-left:'.($jx+(49*$jk)).'px;margin-top:'.($jy+(49*$jl)).'px;width:47px;height:47px;">'.$backpackitem[$j]['image'].'</div>';
 									//$jk = $jk - 1 + $backpackitem[$j]['slots'];
 									//$backpackslots = $backpackslots + $backpackitem[$j]['slots'];
 									$freeslots = $freeslots - 1;

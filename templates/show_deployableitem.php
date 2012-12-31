@@ -108,7 +108,7 @@
                                                                     $unkonw_item = 1;
                                                                 }    
                                                                     
-                                                                if($suka= is_forbidden_item($Backpack[$i], $row['pfname']))
+                                                                if(is_forbidden_item($Backpack[$i], $row['pfname']))
                                                                     $forbidden_item= 1;
 
 									switch($object_array_for_backpack['subtype']){
