@@ -490,6 +490,7 @@ function row_vehicle($row) {
 		if(array_key_exists(0,$Inventory)){ 
 			$bpweaponscount = count($Inventory[0][0]);				
 			for ($m=0; $m<$bpweaponscount; $m++){
+                                        if(isset($Inventory[0][1][$m]))
 					for ($mi=0; $mi<$Inventory[0][1][$m]; $mi++){
 						$bpweapons[] = $Inventory[0][0][$m];
 					}
@@ -501,6 +502,7 @@ function row_vehicle($row) {
 		if(array_key_exists(1,$Inventory)){ 
 			$bpitemscount = count($Inventory[1][0]);
 			for ($m=0; $m<$bpitemscount; $m++){
+                                if(isset($Inventory[1][1][$m]))
 				for ($mi=0; $mi<$Inventory[1][1][$m]; $mi++){
 					$bpitems[] = $Inventory[1][0][$m];
 				}
@@ -510,6 +512,7 @@ function row_vehicle($row) {
 		if(array_key_exists(2,$Inventory)){ 
 			$bpackscount = count($Inventory[2][0]);
 			for ($m=0; $m<$bpackscount; $m++){
+                                if(isset($Inventory[2][1][$m]))
 				for ($mi=0; $mi<$Inventory[2][1][$m]; $mi++){
 					$bpacks[] = $Inventory[2][0][$m];
 				}
@@ -588,6 +591,7 @@ function row_vehicle_spawns($row) {
 		if(array_key_exists(0,$Inventory)){ 
 			$bpweaponscount = count($Inventory[0][0]);				
 			for ($m=0; $m<$bpweaponscount; $m++){
+                                        if(isset($Inventory[0][1][$m]))
 					for ($mi=0; $mi<$Inventory[0][1][$m]; $mi++){
 						$bpweapons[] = $Inventory[0][0][$m];
 					}
@@ -599,6 +603,7 @@ function row_vehicle_spawns($row) {
 		if(array_key_exists(1,$Inventory)){ 
 			$bpitemscount = count($Inventory[1][0]);
 			for ($m=0; $m<$bpitemscount; $m++){
+                                if(isset($Inventory[1][1][$m]))
 				for ($mi=0; $mi<$Inventory[1][1][$m]; $mi++){
 					$bpitems[] = $Inventory[1][0][$m];
 				}
@@ -608,6 +613,7 @@ function row_vehicle_spawns($row) {
 		if(array_key_exists(2,$Inventory)){ 
 			$bpackscount = count($Inventory[2][0]);
 			for ($m=0; $m<$bpackscount; $m++){
+                                 if(isset($Inventory[2][1][$m]))
 				for ($mi=0; $mi<$Inventory[2][1][$m]; $mi++){
 					$bpacks[] = $Inventory[2][0][$m];
 				}
