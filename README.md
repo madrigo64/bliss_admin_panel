@@ -61,13 +61,13 @@ taviana
 
 Installation:
 =============
-1) Import file <code>admin_panel.sql</code> from folder installation into Database Mysql
+1) Import file <code>admin_panel.sql</code> from folder <code>installation</code> into Database Mysql
 
 2) Rename file adm_config.incEng.php  to adm_config.php
 
 3) Edit file adm_config.php
 
-4) Login and password for enter in admin panel логин <code>superadmin</code> Пароль <code>123456</code>
+4) Login and password for enter in admin panel login <code>superadmin</code> password <code>123456</code>
 
 
 
@@ -85,14 +85,13 @@ Installation:
 
 Известные Баги
 =================
-На карте Такистан не верно отображаются координаты. Исправлений не будет, так как сама карта сделанна со сдвигом по координатам.
+На карте Такистан не верно отображаются координаты.
+Исправлений не будет, так как сама карта сделанна со сдвигом по координатам.
 
 
 В планах
 ================
 перевести полностью на русский язык
-
-прикрутить карту taviana
 
 и еще многое другое полезное если увижу от вас финансовую поддержку
 а хороших идей у меня много
