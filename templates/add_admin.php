@@ -17,7 +17,7 @@
         <td align="right"> Password:</td><td>  <input required="true" name="password" type="password"></td>
       </tr>
       <tr>
-        <td align="right"> GUID:</td><td>  <input  name="guid" type="text" size="32"></td>
+        <td align="right"> GUID:(not implemented)</td><td>  <input disabled name="guid" type="text" size="32"></td>
       </tr>           
       <tr>
         <td align="center" collspawn="2">Privileges:</td>

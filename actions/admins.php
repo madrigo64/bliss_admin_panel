@@ -167,7 +167,7 @@ $players_logs = mysql_query($query_players_logs) or die(mysql_error());
 	
 
 	if ($errort==''){
-		$password = md5(md5($password) . $salt);
+		$password = md5(md5($password));
 	 		$query = "INSERT INTO adm_admins SET
 						login='$login',
 						password='$password',
