@@ -30,8 +30,12 @@ Mysql Server 5.5
 
 при разрешении экрана/tested on resolution 1920x1800
 
-Сервер Bliss (тестировалось на версии Bliss 4.2)/Bliss server   (tested on bliss version 4.2)
+Сервер Bliss (тестировалось на версии Bliss 4.2)/Bliss server   (tested on bliss version 4.2  http://rghost.ru/42776001)
+
+
+main repository of bliss server
 https://github.com/ayan4m1/DayZ-Private
+
 
 
 Сведения/Information
