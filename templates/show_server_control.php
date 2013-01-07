@@ -84,25 +84,22 @@ $(document).ready(function() {
 
      $('#bec_status_img').click(function(){ 
           if(getServerStatus() == 'on'){
-            var bec_status = getBecStatus();
-            var action = '';
-            if(bec_status == 'on') action = 'bec_off'; else action='bec_on';
-           
-            
-            
-        $('#ajax_loader_bec').show(500);    
-        $.ajax({
-         url: 'actions/server_control.php',
-          data: { action: action },
-          type: "POST",
-         complete : function() {
-            getBecStatus();
-            $('#ajax_loader_bec').hide(500); 
-         }
-       });           
-            
-            
-           
+                    var bec_status = getBecStatus();
+                    var action = '';
+                    if(bec_status == 'on') action = 'bec_off'; else action='bec_on';
+
+
+
+                    $('#ajax_loader_bec').show(500);    
+                    $.ajax({
+                     url: 'actions/server_control.php',
+                      data: { action: action },
+                      type: "POST",
+                     complete : function() {
+                        getBecStatus();
+                        $('#ajax_loader_bec').hide(500); 
+                     }
+                   });           
           }
           else alert('can not start bec because server is off');
      });
@@ -138,7 +135,7 @@ $(document).ready(function() {
    <tr> 
     <td colspan="2">    
         <font color="#25A7E8" size="1"> Battleye Extended Control (BEC) not found in <?php echo BEC_PATH.DS.BECEXE ?> <br>
-     if you like to use it check config.php file </font>
+     if you like to use it check adm_config.php file </font>
     </td>
    </tr> 
 <?php  endif; ?>
