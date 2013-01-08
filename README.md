@@ -38,6 +38,8 @@ https://github.com/ayan4m1/DayZ-Private
 
 (Тестировалось на этой версии репозитория Bliss сервераL Tested on this version of repository bliss 4.2 : http://rghost.ru/42776001)
 
+Path to game where installed bliss server must be without spaces
+Путь до игры где находится сервер должен быть без пробелов
 
 
 Сведения/Information
