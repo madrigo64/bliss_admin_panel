@@ -781,7 +781,7 @@ function getMapParameters($map_name)
 		$map_array['pixelsPerLonRadian_'] = '184.4 / (2 * Math.PI)';
                 $map_array['supported'] = true;
                 break;
-            case "panthera":
+            case "panthera2":
            	$map_array['pixelOrigin_'] = '117.2, 42.9';
 		$map_array['pixelsPerLonDegree_'] = '234.4 / 360';
 		$map_array['pixelsPerLonRadian_'] = '234.4 / (2 * Math.PI)';
