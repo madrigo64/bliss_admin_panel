@@ -4,9 +4,8 @@
  *  my youtube  channel only for russians https://www.youtube.com/user/bfpayer
  */
 
-// WARNING 
+//============= WARNING !!!!!!!!!!!!!!!
 // FIRST YOU MUST IMPORT SQL FILE INTO Date Base MySQL From folder Installation
-// SECOND  PATH TO THIS ADMIN PANEL MUST BE WITHOUT ANY SPACES!!
 
 
 define('INSTANCE', 1);   //instance id
@@ -29,7 +28,7 @@ define('VIP_PLAYERS', '');  //do not check forbidden items for VIP players  for 
 
 
 // For start and stop  server from admin panel
-define('GAME_PATH', 'D:'.DS.'Games'.DS.'ArmA2');  // game path of arma2
+define('GAME_PATH', 'D:'.DS.'Games'.DS.'ArmA2');  // game path of arma2 PATH  MUST BE WITHOUT ANY SPACES!!
 define('SERVEREXE', 'arma2oaserver.exe');  // exe file of server
 
 define('SERVER_START_FILE', GAME_PATH.DS.'ADM_START_SERVER.bat'); // this file needed for runing server from admin panel and will help when apache is running as service.
