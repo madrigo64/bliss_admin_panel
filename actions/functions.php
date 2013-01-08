@@ -904,9 +904,13 @@ function getLanguages($languages){
 // check player for forbidden item  return true if item forbidden
 function is_forbidden_item($curitem, $player_name, $show_type) {
    if(strpos(VIP_PLAYERS, $player_name) === false ) {
-       if($show_type == 'online') $_SESSION['forbidden_item'][$player_name][] = $curitem;   // set warning message
+       
         $adm_object = getObjectByClassName($curitem);
-        if($adm_object['allowed'] === 0) return true;
+        if($adm_object['allowed'] === 0){
+            if($show_type == 'online') 
+                $_SESSION['forbidden_item'][$player_name][] = $curitem;   // set warning message only for online
+            return true;
+        }
         if($adm_object['allowed'] == 1) return false;
         return true;
    }else return false; 
