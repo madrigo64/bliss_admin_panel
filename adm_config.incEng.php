@@ -6,6 +6,7 @@
 
 //============= WARNING !!!!!!!!!!!!!!!
 // FIRST YOU MUST IMPORT SQL FILE INTO Date Base MySQL From folder Installation
+// by defatul for enter in admin panel login is superadmin password is 123456
 
 
 define('INSTANCE', 1);   //instance id
