@@ -16,7 +16,7 @@ http://youtu.be/AVBu4vuq2EA
 
 Требоавания/requirements:
 =================
-Windows
+Windows 7 or above (тестировалось в /tested on: windows 8 x64)
 
 Web Server Apache 2
 
@@ -28,13 +28,15 @@ Mysql Server 5.5
 
 Тестировалось в/tested on: Firefox 17.0.1
 
-при разрешении экрана/tested on resolution 1920x1800
+при разрешении экрана/tested on resolution: 1920x1800
 
-Сервер Bliss (тестировалось на версии Bliss 4.2)/Bliss server   (tested on bliss version 4.2  http://rghost.ru/42776001)
+Сервер Bliss (тестировалось на версии Bliss 4.2)/Bliss server   (tested on bliss version 4.2)
 
-
-main repository of bliss server
+Главный репозиторий сервера Bliss
+Main repository of Bliss server
 https://github.com/ayan4m1/DayZ-Private
+
+(Тестировалось на этой версии репозитория Bliss сервераL Tested on this version of repository bliss 4.2 : http://rghost.ru/42776001)
 
 
 
