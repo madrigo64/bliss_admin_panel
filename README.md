@@ -16,7 +16,7 @@ http://youtu.be/AVBu4vuq2EA
 
 Требоавания/requirements:
 =================
-Windows 7 or above (тестировалось в /tested on: windows 8 x64)
+Windows 7 or above /винда 7 или выше (тестировалось в /tested on: windows 8 x64)
 
 Web Server Apache 2
 
@@ -33,12 +33,17 @@ Mysql Server 5.5
 Сервер Bliss (тестировалось на версии Bliss 4.2)/Bliss server   (tested on bliss version 4.2)
 
 Главный репозиторий сервера Bliss
+
 Main repository of Bliss server
+
 https://github.com/ayan4m1/DayZ-Private
 
-(Тестировалось на этой версии репозитория Bliss сервераL Tested on this version of repository bliss 4.2 : http://rghost.ru/42776001)
+( Тестировалось на этой версии репозитория Bliss сервера
+
+ Tested on this version of repository bliss 4.2 : http://rghost.ru/42776001 )
 
 Path to game where installed bliss server must be without spaces
+
 Путь до игры где находится сервер должен быть без пробелов
 
 
