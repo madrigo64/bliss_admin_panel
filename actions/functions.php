@@ -333,8 +333,9 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         // check item if FORBIDDEN
                         $is_forbidden_item ='';
                         if($unknow_item == false && ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
-                                if($is_forbidden_item = is_forbidden_item($curitem, $player_name) == true){ 
-                                  if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
+                                if($is_forbidden_item = is_forbidden_item($curitem, $player_name, $show_type) == true){ 
+                                  if($show_type == 'online') 
+                                     if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
                                 }    
                         }
                         $vss='';
@@ -406,7 +407,7 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         // check item if FORBIDDEN
                         $is_forbidden_item ='';
                         if($unknow_item == false && ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
-                                if($is_forbidden_item = is_forbidden_item($curitem, $player_name) == true){ 
+                                if($is_forbidden_item = is_forbidden_item($curitem, $player_name, $show_type) == true){ 
                                   if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
                                 }    
                         }
@@ -901,8 +902,9 @@ function getLanguages($languages){
 }
 
 // check player for forbidden item  return true if item forbidden
-function is_forbidden_item($curitem, $player_name) {
+function is_forbidden_item($curitem, $player_name, $show_type) {
    if(strpos(VIP_PLAYERS, $player_name) === false ) {
+       if($show_type == 'online') $_SESSION['forbidden_item'][$player_name][] = $curitem;   // set warning message
         $adm_object = getObjectByClassName($curitem);
         if($adm_object['allowed'] === 0) return true;
         if($adm_object['allowed'] == 1) return false;
@@ -919,12 +921,6 @@ function is_forbidden_item($curitem, $player_name) {
 // kick or ban player with forbidden item
 function  forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID){
     
-    $_SESSION['forbidden_item'][$player_name][] = $curitem;
-
-        
-
-    
-     
       if(ACTION_FORBIDDEN_ITEMS == 1)  {
         $_SESSION['msg_red'] .= "<br><font color=red>forbidden item $curitem Player $player_name  Banned!!</font>";    
         rcon('addban '.$player_IP.' 0 Cheating/Hacking' );
