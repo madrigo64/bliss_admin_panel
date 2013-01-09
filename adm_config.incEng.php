@@ -10,7 +10,7 @@
 
 
 define('INSTANCE', 1);   //instance id
-define('DESABLE_ZOOM_5_6', false);   // true/false  Desable zoom 5 and 6 for map. Admin panel don't have map for zoom level 5 and 6 (check this in the folder map) but admin panel will try to downlod pieces of map for this leves
+define('DISABLE_ZOOM_5_6', false);   // true/false  Desable zoom 5 and 6 for map. Admin panel don't have map for zoom level 5 and 6 (check this in the folder map) but admin panel will try to downlod pieces of map for this leves
 define('GET_MAP_FOR_ZOOM_5AND6_LOCAL', true); // true/false if set true  will try to downlod pieces of map for this leves  from internet on hard disk and display  pieces of map  for  zoom 5 and 6 from hard disk.  if set to false will try to display map only local (from hard disk) without trying to download from internet
 define('SITENAME', 'Admin Panel for Bliss Dayz server');  // not implemented yet
 define('SERVERIP', '127.0.0.1');//server ip

@@ -12,7 +12,7 @@
 
 // true - истина  false - ложь  или true - да  false - нет
 define('INSTANCE', 1);   //instance id
-define('DESABLE_ZOOM_5_6', false);   // true/false Отключить зум 5 и 6 для карты  true - отключить false - нет
+define('DISABLE_ZOOM_5_6', false);   // true/false Отключить зум 5 и 6 для карты  true - отключить false - нет
 define('GET_MAP_FOR_ZOOM_5AND6_LOCAL', true); // true/false если установлено как true на зуме 5 и 6 попробует стянуть куски карты с интернета и сохранить на жесткий диск если их нет на жестком диске если установлено как false будет пытаться отобразить карту только с жесткого диска
 define('SITENAME', 'Админ панель для блисс сервера');  // эта константа не задействована
 define('SERVERIP', '127.0.0.1');// IP адресс сервера 
