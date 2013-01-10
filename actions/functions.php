@@ -113,7 +113,7 @@ function checkRconPlayerName($player_name, $player_rcon_id){
                                 
 				
  // start kick player with bad nicnanme for not ASCII symbol
-                                if( $player_rcon_id!=11 && $player_rcon_id!=12 && ASCII_SYMBOLS_ONLY_FOR_PLAYER_NAME && mb_detect_encoding($player_name, 'ASCII', true) === false ) {
+                                if( ASCII_SYMBOLS_ONLY_FOR_PLAYER_NAME && mb_detect_encoding($player_name, 'ASCII', true) === false ) {
                                     $message_red.= "<br><font color=red>Not ASCII symbols in player name'{$palyer_name_fixed}' kicked!!</font>";
                                     rcon('Kick '.$player_rcon_id.' Bad nikcname not ASCII symbols!');
                                     insert_player_log('KICK', $palyer_name_fixed, 'None',  'Not ASCII symbols in player name!');
@@ -122,7 +122,7 @@ function checkRconPlayerName($player_name, $player_rcon_id){
                                 }
                                 
  // start kick player with bad nicnanme for not UTF-8 symbol
-                                if( $player_rcon_id!=11 && $player_rcon_id!=12 && UTF8_SYMBOLS_ONLY_FOR_PLAYER_NAME && mb_detect_encoding($player_name, 'UTF-8', true) === false ) {
+                                if( UTF8_SYMBOLS_ONLY_FOR_PLAYER_NAME && mb_detect_encoding($player_name, 'UTF-8', true) === false ) {
                                     $message_red.= "<br>Not UTF-8 symbols in player name'{$palyer_name_fixed}' kicked!!";
                                     rcon('Kick '.$player_rcon_id.' Not UTF8 symbols in player name!');
                                     insert_player_log('KICK', $palyer_name_fixed, 'None', 'Not UTF8 symbols in player name!');
