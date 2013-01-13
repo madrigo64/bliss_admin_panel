@@ -32,10 +32,12 @@ define('VIP_PLAYERS', '');  //do not check forbidden items for VIP players  for 
 define('GAME_PATH', 'D:'.DS.'Games'.DS.'ArmA2');  // game path of arma2 PATH  MUST BE WITHOUT ANY SPACES!!
 define('SERVEREXE', 'arma2oaserver.exe');  // exe file of server
 
-define('SERVER_START_FILE', GAME_PATH.DS.'ADM_START_SERVER.bat'); // this file needed for runing server from admin panel and will help when apache is running as service.
+
+define('ADM_START_SERVER','ADM_START_SERVER.bat');// this file needed for runing server from admin panel and will help when apache is running as service.
 // admin panel should copy file ADM_START_SERVER.bat in first time when you enter in Server Control ->Control (wich located in folder installation) 
 //  to main folder of arma2 game which you can edit for start some command before running server for example for running perl script which will spawn vehicles on map
 
+define('SERVER_START_FILE', GAME_PATH.DS.ADM_START_SERVER);  // full path to ADM_START_SERVER
 
 
 define('SERVEREXE_PATH', GAME_PATH.DS."expansion".DS."beta".DS.SERVEREXE); 

@@ -34,10 +34,13 @@ define('VIP_PLAYERS', '');  // не проверять на запрещенны
 define('GAME_PATH', 'D:'.DS.'Games'.DS.'ArmA2'); // путь к папке с игрой  где DS это слеш  путь должен быть без пробелов!!!
 define('SERVEREXE', 'arma2oaserver.exe');  // исполнаемый файл сервера
 
-define('SERVER_START_FILE', GAME_PATH.DS.'ADM_START_SERVER.bat'); // этот файл нужен для запуска сервер через админ панель,
+
+define('ADM_START_SERVER','ADM_START_SERVER.bat');// этот файл нужен для запуска сервер через админ панель,
 //при заходе через меню в опции Конт.Сервера -> Контроль, админ панель должна автоматом скопировать файл ADM_START_SERVER.bat 
 // который находится в папке installation в папку с игрой вы можете его отредактировать что бы запускать дополнительные команды 
 // до запуска сервера например перл скрипт для создания техники на карту
+
+define('SERVER_START_FILE', GAME_PATH.DS.ADM_START_SERVER);  // полный путь до ADM_START_SERVER
 
 
 define('SERVEREXE_PATH', GAME_PATH.DS."expansion".DS."beta".DS.SERVEREXE); 

@@ -9,9 +9,9 @@
 if(!file_exists(SERVER_START_FILE)){
    
    
-   copy('installation'.DS.'ADM_START_SERVER.bat', SERVER_START_FILE) or die("can't copy file from installation".DS.'ADM_START_SERVER.bat'." to ".SERVER_START_FILE."  please check path or copy this file manualy"); 
+   copy('installation'.DS.ADM_START_SERVER, SERVER_START_FILE) or die("<font color=red>Сan't copy file from folder installation".DS.ADM_START_SERVER." to ".SERVER_START_FILE."  please check path or copy this file manualy</font>"); 
   
-   echo "<font color=red size=5>Now check main game folder and you can edit file ADM_START_SERVER.bat <br> for correctly running server</font>";
+   echo "<font color='00FFFF' size=5>Now check main game folder and you can edit file ".ADM_START_SERVER." <br> for correctly running server</font>";
     
 }
 
