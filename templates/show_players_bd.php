@@ -29,9 +29,9 @@
 
 
     <div id="tnt_pagination">
-        Всего записей: <strong><?php echo  $paginationHelper->getPagination()->getCount()?></strong>
+         All records: <strong><?php echo  $paginationHelper->getPagination()->getCount()?></strong>
         <?php if ($paginationHelper->getPagination()->getCount()): ?>
-            <br /><br /><span>Страницы:</span>
+            <br /><br /><span>Pages:</span>
             <?php echo $paginationHelper->getHtml()?>
         <?php endif; ?>
     </div>
@@ -85,9 +85,9 @@
 
 
     <div id="tnt_pagination">
-        Всего записей: <strong><?php echo  $paginationHelper->getPagination()->getCount()?></strong>
+        All records: <strong><?php echo  $paginationHelper->getPagination()->getCount()?></strong>
         <?php if ($paginationHelper->getPagination()->getCount()): ?>
-            <br /><br /><span>Страницы:</span>
+            <br /><br /><span>Pages:</span>
             <?php echo $paginationHelper->getHtml()?>
         <?php endif; ?>
     </div>
