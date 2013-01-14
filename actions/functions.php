@@ -334,7 +334,7 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         $is_forbidden_item ='';
                         if($unknow_item == false && ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
                                 if($is_forbidden_item = is_forbidden_item($curitem, $player_name, $show_type) == true){ 
-                                  if($show_type == 'online') 
+                                  if($show_type == 'online') //kick or ban only when user is online
                                      if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
                                 }    
                         }
@@ -408,7 +408,9 @@ function row_player( $row, $show_type,  $full_invetory=false, $in_lobby=false, $
                         $is_forbidden_item ='';
                         if($unknow_item == false && ACTION_FORBIDDEN_ITEMS != 0  && $curitem!='') {
                                 if($is_forbidden_item = is_forbidden_item($curitem, $player_name, $show_type) == true){ 
-                                  if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
+                                   if($show_type == 'online') //kick or ban only when user is online 
+                                        if(forbidden_item($curitem, $player_name, $player_rcon_id, $player_IP, $player_GUID) == false) continue;
+                                  
                                 }    
                         }
                         $vss='';
@@ -904,11 +906,11 @@ function getLanguages($languages){
 // check player for forbidden item  return true if item forbidden
 function is_forbidden_item($curitem, $player_name, $show_type) {
    if(strpos(VIP_PLAYERS, $player_name) === false ) {
-       
         $adm_object = getObjectByClassName($curitem);
-        if($adm_object['allowed'] === 0){
-            if($show_type == 'online') 
-                $_SESSION['forbidden_item'][$player_name][] = $curitem;   // set warning message only for online
+        if($adm_object['allowed'] == 0){
+            if($show_type == 'online') // set warning message only for online
+                $_SESSION['forbidden_item'][$player_name][] = $curitem;   
+            
             return true;
         }
         if($adm_object['allowed'] == 1) return false;
