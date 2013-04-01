@@ -63,6 +63,8 @@ Path to game where installed bliss server must be without spaces
 
 поддерживает след карты/supported maps
 
+mbg_celle2 (Level 2 maps only)
+
 chernarus
 
 fallujah
