@@ -884,7 +884,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (808, '20Rnd_B_AA12_HE', 's20Rnd_B_AA12_HE', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
 (809, '20Rnd_B_AA12_74Slug', 's20Rnd_B_AA12_74Slug', 'item', 'heavyammo', 0, 0, 0, 0, 1, 'heavyammo', 0, 0),
 (810, 'Ka60_GL_NAC', 'Ka60_GL_NAC', 'vehicle', 'air', 3, 10, 0, 20, 0, 'helicopter', 1, 0),
-(811, 'VSS_vintorez_DZN', 'VSS_vintorez_DZN', 'item', 'rifle', 0, 0, 0, ,0 10, 'rifle', 0, 0),
+(811, 'VSS_vintorez_DZN', 'VSS_vintorez_DZN', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (812, 'RPK_74_DZN', 'RPK_74_DZN', 'item', 'rifle', 0, 0, 0, 0, 30, 'rifle', 0, 0);
 
 -- --------------------------------------------------------
