@@ -898,7 +898,7 @@ CREATE TABLE IF NOT EXISTS `adm_players_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `action` varchar(20) NOT NULL,
   `player_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `player_ip` varchar(16) NOT NULL,
+  `player_ip` varchar(25) NOT NULL,
   `admin_name_session` varchar(100) NOT NULL,
   `reason` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created_at` datetime NOT NULL,
