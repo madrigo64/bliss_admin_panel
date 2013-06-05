@@ -1,20 +1,8 @@
--- phpMyAdmin SQL Dump
--- version 3.5.2.2
--- http://www.phpmyadmin.net
---
--- Хост: 127.0.0.1
--- Время создания: Янв 08 2013 г., 22:55
--- Версия сервера: 5.5.27
--- Версия PHP: 5.4.7
+
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
---
--- База данных: `dayz_longhost`
---
---
--- Структура таблицы `adm_admins`
---
+
 
 DROP TABLE IF EXISTS `adm_admins`;
 CREATE TABLE IF NOT EXISTS `adm_admins` (
@@ -28,18 +16,12 @@ CREATE TABLE IF NOT EXISTS `adm_admins` (
   UNIQUE KEY `login` (`login`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Дамп данных таблицы `adm_admins`
---
+
 
 INSERT INTO `adm_admins` (`id`, `login`, `password`, `guid`, `lastlogin`, `permissions`) VALUES
 (1, 'superadmin', 'e10adc3949ba59abbe56e057f20f883e', '', '2012-12-24 02:48:56', 'control,admins,chat,entities,map,');
 
--- --------------------------------------------------------
 
---
--- Структура таблицы `adm_admins_log`
---
 
 DROP TABLE IF EXISTS `adm_admins_log`;
 CREATE TABLE IF NOT EXISTS `adm_admins_log` (
@@ -50,11 +32,7 @@ CREATE TABLE IF NOT EXISTS `adm_admins_log` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
--- --------------------------------------------------------
 
---
--- Структура таблицы `adm_objects`
---
 
 DROP TABLE IF EXISTS `adm_objects`;
 CREATE TABLE IF NOT EXISTS `adm_objects` (
@@ -75,9 +53,7 @@ CREATE TABLE IF NOT EXISTS `adm_objects` (
   UNIQUE KEY `class_name` (`class_name`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=710 ;
 
---
--- Дамп данных таблицы `adm_objects`
---
+
 
 INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `transport_max_weapons`, `transport_max_magazines`, `transport_max_backpacks`, `cargo`, `slots`, `icon_type`, `rmod_supported`, `allowed`) VALUES
 (1, 'An2_1_TK_CIV_EP1', 'An-2 (Aeroshrot)', 'vehicle', 'Air', 3, 20, 0, 15, 0, 'aircraftsmall', 0, 0),
@@ -887,11 +863,7 @@ INSERT INTO `adm_objects` (`id`, `class_name`, `name`, `type`, `subtype`, `trans
 (811, 'VSS_vintorez_DZN', 'VSS_vintorez_DZN', 'item', 'rifle', 0, 0, 0, 0, 10, 'rifle', 0, 0),
 (812, 'RPK_74_DZN', 'RPK_74_DZN', 'item', 'rifle', 0, 0, 0, 0, 30, 'rifle', 0, 0);
 
--- --------------------------------------------------------
 
---
--- Структура таблицы `adm_players_log`
---
 
 DROP TABLE IF EXISTS `adm_players_log`;
 CREATE TABLE IF NOT EXISTS `adm_players_log` (
