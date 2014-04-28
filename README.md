@@ -1,13 +1,11 @@
-Donate
-==========
-This free project is dead.
+Warning. This free project is dead, but is still working on Reality server
 ==================
 
 
-Bliss Admin Panel
+Reality Admin Panel
 =================
 
-Web Admin Panel on PHP for Bliss Dayz Private Server by skynetdev
+Web Admin Panel on PHP for Reality Dayz Private Server by skynetdev
 
 Sorry guys but my english is not perfect, therefore I will write here on russian language, but
 anyway admin panel support english language of course.
@@ -15,10 +13,8 @@ anyway admin panel support english language of course.
 If you will create any issue in english language,
 I will try answer in english.
 
-Веб Админ Панель на PHP для Bliss сервера игры Dayz от skynetdev
+Веб Админ Панель на PHP для Reality сервера игры Dayz от skynetdev
 =================
-Видео инструкция и обзор админ панели 
-http://youtu.be/AVBu4vuq2EA
 
 Требоавания/requirements:
 =================
@@ -36,19 +32,18 @@ Mysql Server 5.5
 
 при разрешении экрана/tested on resolution: 1920x1800
 
-Сервер Bliss (тестировалось на версии Bliss 4.2)/Bliss server   (tested on bliss version 4.2)
+(тестировалось на версии Reality)   (tested on Reality version)
 
-Главный репозиторий сервера Bliss
 
-Main repository of Bliss server
+Главный репозиторий сервера Reality
 
-https://github.com/ayan4m1/DayZ-Private
+Main repository of Reality private server
 
-( Тестировалось на этой версии репозитория Bliss сервера
+https://github.com/thevisad/DayZ-Private-master
 
- Tested on this version of repository bliss 4.2 : http://rghost.ru/42776001 )
 
-Path to game where installed bliss server must be without spaces
+
+Path to game where installed Reality server must be without spaces
 
 Путь до игры где находится сервер должен быть без пробелов
 
@@ -77,10 +72,6 @@ taviana
 
 celle
 
-
-Поддерживаемые моды / Addons supported
-
-@rmod
 
 Installation:
 =============
@@ -112,13 +103,6 @@ Installation:
 Исправлений не будет, так как сама карта сделанна со сдвигом по координатам.
 
 
-В планах
-================
-перевести полностью на русский язык
-
-и еще многое другое полезное если увижу от вас финансовую поддержку
-а хороших идей у меня много
-
 
 Этот бесплатный проект умер.
 
@@ -135,9 +119,6 @@ Installation:
 
 2012.12.28  15:40  465.00 руб  dervart
 
-Сорри кого не запомнил.
-кто-то еще присал на яндекс 60 руб тоже не запомнил никнэйма на ютубе
-в след раз обещаю запоминать 
 
 
 Контакты:
