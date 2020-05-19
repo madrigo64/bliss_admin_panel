@@ -5,7 +5,7 @@ Warning. This free project is dead, but is still working on Reality server
 Reality Admin Panel
 =================
 
-Web Admin Panel on PHP for Reality Dayz Private Server by skynetdev
+Web Admin Panel on PHP for Reality Dayz Private Server by mydrigo64
 
 Sorry guys but my english is not perfect, therefore I will write here on russian language, but
 anyway admin panel support english language of course.
