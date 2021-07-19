@@ -13,7 +13,7 @@ anyway admin panel support english language of course.
 If you will create any issue in english language,
 I will try answer in english.
 
-Веб Админ Панель на PHP для Reality сервера игры Dayz от skynetdev
+Веб Админ Панель на PHP для Reality сервера игры Dayz от mydrigo64
 =================
 
 Требоавания/requirements:
